@@ -22,8 +22,8 @@ server.set('views', Path.resolve('server/views'))
 
 // Your routes/router(s) should go here
 server.get('/', async (req, res) => {
-  const puppies = await lib.getFile()
-  res.render('home', puppies)
+  const bubbleTea = await lib.getFile()
+  res.render('home', bubbleTea)
 })
 
 server.use('/puppies', puppyRoutes)
