@@ -12,6 +12,9 @@ async function findPuppy(req) {
 // Routes
 // Home (/) > 'check our menu' button
 // Menu (/menu)
+// Details (/:id) > get
+// Details (/:id) > post
+// Order complete (/ordersent) > get
 
 router.get('/menu', async (req, res) => {
   const teas = await lib.getFile() // object
@@ -22,25 +25,6 @@ router.get('/menu', async (req, res) => {
     teas: bubbleTeas,
   }
   res.render('menu', viewData)
-})
-
-router.post('/add-puppy', async (req, res) => {
-  const puppiesFile = await lib.getFile()
-  const newPuppy = {
-    id: puppiesFile.puppies.length + 1,
-    name: req.body.name,
-    owner: req.body.owner,
-    image: req.body.image,
-    breed: req.body.breed,
-  }
-
-  puppiesFile.puppies.push(newPuppy)
-  await lib.updateFile(puppiesFile)
-
-  const viewData = {
-    visible: 'visible',
-  }
-  res.render('add-puppy', viewData)
 })
 
 router.get('/:id', async (req, res) => {
@@ -66,6 +50,25 @@ router.post('/:id/edit', async (req, res) => {
   await lib.updateFile(puppiesFile)
 
   res.redirect(`/puppies/${id}`)
+})
+
+router.post('/add-puppy', async (req, res) => {
+  const puppiesFile = await lib.getFile()
+  const newPuppy = {
+    id: puppiesFile.puppies.length + 1,
+    name: req.body.name,
+    owner: req.body.owner,
+    image: req.body.image,
+    breed: req.body.breed,
+  }
+
+  puppiesFile.puppies.push(newPuppy)
+  await lib.updateFile(puppiesFile)
+
+  const viewData = {
+    visible: 'visible',
+  }
+  res.render('add-puppy', viewData)
 })
 
 export default router
