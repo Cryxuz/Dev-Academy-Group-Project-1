@@ -1,74 +1,70 @@
 {
-  "puppies": [
+  "bubbleteas": [
     {
       "id": 1,
-      "name": "Fidooooo",
-      "owner": "Fredyyyyy",
-      "image": "/images/puppy1.jpg",
-      "breed": "Labrador"
+      "name": "Original Milk tea",
+      "type": "milk",
+      "temp": "cold",
+      "image": "/images/bubbletea1.jpg",
+      "sugar": "100%",
+      "ice":"100%",
+      "size": "large",
+      "topping": "bubbles"
     },
     {
       "id": 2,
-      "name": "Lizzy",
-      "owner": "Tiffany",
-      "image": "/images/puppy2.jpg",
-      "breed": "West Highland"
+      "name": "Taro Milk tea",
+      "type": "milk",
+      "temp": "cold",
+      "image": "/images/bubbletea2.jpg",
+      "sugar": "100%",
+      "ice":"100%",
+      "size": "large",
+      "topping": "taro"
     },
     {
       "id": 3,
-      "name": "Backy",
-      "owner": "Peter",
-      "image": "/images/puppy3.jpg",
-      "breed": "Rottweiler"
+      "name": "Oatmeal Milk tea",
+      "type": "oat milk",
+      "temp": "cold",
+      "image": "/images/bubbletea3.jpg",
+      "sugar": "100%",
+      "ice":"100%",
+      "size": "large",
+      "topping": "oats"
     },
     {
       "id": 4,
-      "name": "Sadie",
-      "owner": "Sam",
-      "image": "/images/puppy4.jpg",
-      "breed": "Labrador"
+      "name": "Matcha Milk tea",
+      "type": "milk",
+      "temp": "cold",
+      "image": "/images/bubbletea4.jpg",
+      "sugar": "100%",
+      "ice":"100%",
+      "size": "large",
+      "topping": "bubbles"
     },
     {
       "id": 5,
-      "name": "Murphy",
-      "owner": "Matthew",
-      "image": "/images/puppy5.jpg",
-      "breed": "Pug"
+      "name": "Mango Milk tea",
+      "type": "fresh tea",
+      "temp": "cold",
+      "image": "/images/bubbletea5.jpg",
+      "sugar": "100%",
+      "ice":"100%",
+      "size": "large",
+      "topping": "mango pudding"
     },
     {
       "id": 6,
-      "name": "Bell",
-      "owner": "Johnnie",
-      "image": "/images/puppy6.jpg",
-      "breed": "Labrador"
-    },
-    {
-      "id": 7,
-      "name": "Rocky",
-      "owner": "Ricky",
-      "image": "/images/puppy7.jpg",
-      "breed": "Labrador"
-    },
-    {
-      "id": 8,
-      "name": "GOGO",
-      "owner": "Sam",
-      "image": "/images/puppy8.png",
-      "breed": "Snowball"
-    },
-    {
-      "id": 9,
-      "name": "Turupy",
-      "owner": "Tiffany",
-      "image": "/images/nonpuppy.png",
-      "breed": "Anti-puppy"
-    },
-    {
-      "id": 10,
-      "name": "Boku",
-      "owner": "Sam",
-      "image": "https://img.freepik.com/free-photo/young-brown-french-bulldog-playing-isolated-white-studio-wall_155003-31898.jpg?w=1800&t=st=1691031560~exp=1691032160~hmac=4022d61f09353131c5ff6b95183413a90fd0718dd4636dba86953bdf280687ae",
-      "breed": "Bulldog"
+      "name": "Strawberry Milk tea",
+      "type": "fresh tea",
+      "temp": "cold",
+      "image": "/images/bubbletea6.jpg",
+      "sugar": "100%",
+      "ice":"100%",
+      "size": "large",
+      "topping": "sago"
     }
   ]
 }
