@@ -7,7 +7,7 @@
   "author": "Dev Academy Aotearoa",
   "license": "ISC",
   "scripts": {
-    "start": "node server/index",
+    "start": "nodemon server/index",
     "dev": "nodemon --ignore 'server/data/' server/index",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "test": "vitest",
