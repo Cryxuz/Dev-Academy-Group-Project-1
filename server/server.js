@@ -6,7 +6,7 @@ import express from 'express'
 import hbs from 'express-handlebars'
 import * as lib from './routes/lib.js'
 
-import puppyRoutes from './routes/routes.js'
+import bubbleTeaRoutes from './routes/routes.js'
 
 const server = express()
 
@@ -26,6 +26,6 @@ server.get('/', async (req, res) => {
   res.render('home', bubbleTea)
 })
 
-server.use('/puppies', puppyRoutes)
+server.use('/bubbletea', bubbleTeaRoutes)
 
 export default server

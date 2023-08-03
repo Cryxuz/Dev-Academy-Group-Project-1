@@ -9,11 +9,19 @@ async function findPuppy(req) {
   return puppiesFile.puppies.find((element) => element.id == id)
 }
 
-router.get('/add-puppy', async (req, res) => {
+// Routes
+// Home (/) > 'check our menu' button
+// Menu (/menu)
+
+router.get('/menu', async (req, res) => {
+  const teas = await lib.getFile() // object
+  const bubbleTeas = teas['bubbleteas'] // array
+  // console.log(`Teas: ${teas}`)
+  // console.log(`Bubbleteas: ${teas['bubbleteas']}`)
   const viewData = {
-    visible: 'hidden',
+    teas: bubbleTeas,
   }
-  res.render('add-puppy', viewData)
+  res.render('menu', viewData)
 })
 
 router.post('/add-puppy', async (req, res) => {
