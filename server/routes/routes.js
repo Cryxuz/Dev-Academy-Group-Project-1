@@ -3,10 +3,10 @@ import * as lib from './lib.js'
 
 const router = express.Router()
 
-async function findPuppy(req) {
+async function findBubbletea(req) {
   const { id } = req.params
-  const puppiesFile = await lib.getFile()
-  return puppiesFile.puppies.find((element) => element.id == id)
+  const bubbleteaFile = await lib.getFile()
+  return bubbleteaFile.bubbleteas.find((element) => element.id == id)
 }
 
 // Routes
@@ -28,13 +28,17 @@ router.get('/menu', async (req, res) => {
 })
 
 router.get('/:id', async (req, res) => {
-  const puppy = await findPuppy(req)
-  res.render('details', puppy)
+  const bubbletea = await findBubbletea(req)
+  res.render('details', bubbletea)
 })
 
-router.get('/:id/edit', async (req, res) => {
+router.post('/:id', async (req, res) => {
   const puppy = await findPuppy(req)
   res.render('edit', puppy)
+})
+
+router.get('/ordersent', (req, res) => {
+  res.render('order-sent')
 })
 
 router.post('/:id/edit', async (req, res) => {
