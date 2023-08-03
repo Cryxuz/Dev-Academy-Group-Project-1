@@ -2,22 +2,22 @@
   "puppies": [
     {
       "id": 1,
-      "name": "Fido",
-      "owner": "Fred",
+      "name": "Fidooooo",
+      "owner": "Fredyyyyy",
       "image": "/images/puppy1.jpg",
       "breed": "Labrador"
     },
     {
       "id": 2,
-      "name": "Coco",
-      "owner": "Chloe",
+      "name": "Lizzy",
+      "owner": "Tiffany",
       "image": "/images/puppy2.jpg",
-      "breed": "Labrador"
+      "breed": "West Highland"
     },
     {
       "id": 3,
-      "name": "Magnum",
-      "owner": "Michael",
+      "name": "Backy",
+      "owner": "Peter",
       "image": "/images/puppy3.jpg",
       "breed": "Rottweiler"
     },
@@ -37,8 +37,8 @@
     },
     {
       "id": 6,
-      "name": "Bella",
-      "owner": "Brianna",
+      "name": "Bell",
+      "owner": "Johnnie",
       "image": "/images/puppy6.jpg",
       "breed": "Labrador"
     },
@@ -48,6 +48,27 @@
       "owner": "Ricky",
       "image": "/images/puppy7.jpg",
       "breed": "Labrador"
+    },
+    {
+      "id": 8,
+      "name": "GOGO",
+      "owner": "Sam",
+      "image": "/images/puppy8.png",
+      "breed": "Snowball"
+    },
+    {
+      "id": 9,
+      "name": "Turupy",
+      "owner": "Tiffany",
+      "image": "/images/nonpuppy.png",
+      "breed": "Anti-puppy"
+    },
+    {
+      "id": 10,
+      "name": "Boku",
+      "owner": "Sam",
+      "image": "https://img.freepik.com/free-photo/young-brown-french-bulldog-playing-isolated-white-studio-wall_155003-31898.jpg?w=1800&t=st=1691031560~exp=1691032160~hmac=4022d61f09353131c5ff6b95183413a90fd0718dd4636dba86953bdf280687ae",
+      "breed": "Bulldog"
     }
   ]
 }

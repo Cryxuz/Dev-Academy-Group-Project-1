@@ -1,6 +1,8 @@
 body {
-  background-color: #FFCCCC;
-  font-family: 'Spirax', cursive;
+  background-color: #f5feff;
+  font-family: 'roboto', cursive;
+  font-size: 18px;
+  color: #443f63;
 }
 
 .container {
@@ -14,18 +16,31 @@ body {
   flex-direction: column;
 }
 
-.puppy-list {
+.tea-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+}
+
+.tea-list p,
+.bubbletea h2,
+.order-list p {
+  font-size: 32px;
+  font-family: 'lobster', cursive;
+  color: #443f63;
+}
+
+.bubbletea {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 50px;
 }
 
-.puppy {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 50px;
+.bubbletea p {
+  font-size: 18px;
+  margin-top: 2px;
 }
 
 .img-circle {
@@ -37,6 +52,37 @@ body {
 
 .title {
   text-align: center;
+  font-size: 8rem;
+  font-family: 'lobster', cursive;
+  color: #443f63;
+}
+
+.link {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 24px 20px 24px;
+  background-color: #ffa303;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.link a {
+  color: #f5feff;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.back {
+  color: #443f63;
+  margin-top: 20px;
+}
+
+.homepage-img {
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
 }
 
 .nav {
@@ -45,8 +91,26 @@ body {
 }
 
 .form {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: 'Roboto', sans-serif;
+}
+
+input {
+  margin-top: 10px;
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  border: #ffa303 solid 1px;
+}
+
+label {
+  font-size: 18px;
+}
+
+.order-list {
+  width: fit-content;
+  background-color: #ffa303;
 }

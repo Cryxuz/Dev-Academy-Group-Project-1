@@ -1,7 +1,14 @@
-<div class="puppy">
-  <img class="img-circle" src="{{image}}" alt="{{name}}">
+<div class="bubbletea">
+  <img class="img-circle" src="{{image}}" alt="this is an image of a {{name}}">
   <h2>{{name}}</h2>
-  <div>Breed: {{breed}}</div>
-  <div>Owner: {{owner}}</div>
-  <a href="/puppies/{{id}}/edit">Edit</a>
+  <p>Base: {{base}}</p>
+  <p>Topping: {{topping}}</p>
+
+  <div class="link">
+  <a class="order" href="/puppies/{{id}}/order">make order</a>
+  </div>
+
+
+  <a class="back" href="/bubbletea/menu">back to menu</a>
+
 </div>
