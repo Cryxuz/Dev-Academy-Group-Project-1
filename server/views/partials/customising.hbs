@@ -1,0 +1,60 @@
+<div>
+  <form class="form" action="/bubbletea/{{id}}" method="post">
+
+<div>
+<legend>Size:</legend>
+
+  <label for="small">Small</label>
+<input type="radio" id="size" name="size" value="small">
+
+  <label for="large">Large</label>
+<input type="radio" id="size" name="size" value="large">
+</div>
+
+<div>
+<legend>Temperature:</legend>
+
+  <label for="hot">Hot</label>
+<input type="radio" id="temp" name="temp" value="hot">
+  <label for="cold">Cold</label>
+<input type="radio" id="temp" name="temp" value="cold">
+</div>
+
+
+  <label for="ice">Ice: </label>
+<select name="ice" id="ice">
+  <option value="No Ice">No Ice</option>
+   <option value="30%">30%</option>
+     <option value="70%">70%</option>
+   <option value="Standard">Standard Ice</option>
+</select></form>
+
+  <label for="sugar">Sugar: </label>
+
+<select name="sugar" id="sugar">
+  <option value="no sugar">No sugar</option>
+   <option value="30%">30% Sugar</option>
+     <option value="70%">70% Sugar</option>
+   <option value="standard">Standard sugar</option>
+</select>
+
+<label for="topping">Topping: </label>
+
+<select name="topping" id="topping">
+  <option value="bubbles">Bubbles</option>
+   <option value="sago">Sago</option>
+     <option value="taro">Taro</option>
+   <option value="pudding">Pudding</option>
+   <option value="jelly">Jelly</option>
+   <option value="secret topping">Secret Topping</option>
+</select>
+
+<input type="submit" value="Submit">
+
+</form>
+  
+ 
+
+
+
+</div>
