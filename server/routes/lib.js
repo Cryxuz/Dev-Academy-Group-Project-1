@@ -1,9 +1,7 @@
 import fs from 'node:fs/promises'
 import * as Path from 'node:path'
 
-const filePath = 'server/data/data.json'
-
-export async function getFile() {
+export async function getFile(filePath) {
   try {
     return await fs
       .readFile(Path.resolve(filePath), 'utf-8')

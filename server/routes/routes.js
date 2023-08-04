@@ -5,7 +5,7 @@ const router = express.Router()
 
 async function findBubbletea(req) {
   const { id } = req.params
-  const bubbleteaFile = await lib.getFile()
+  const bubbleteaFile = await lib.getFile('server/data/data.json')
   return bubbleteaFile.bubbleteas.find((element) => element.id == id)
 }
 
@@ -17,7 +17,7 @@ async function findBubbletea(req) {
 // Order complete (/ordersent) > get
 
 router.get('/menu', async (req, res) => {
-  const teas = await lib.getFile() // object
+  const teas = await lib.getFile('server/data/data.json') // object
   const bubbleTeas = teas['bubbleteas'] // array
   // console.log(`Teas: ${teas}`)
   // console.log(`Bubbleteas: ${teas['bubbleteas']}`)
@@ -25,6 +25,16 @@ router.get('/menu', async (req, res) => {
     teas: bubbleTeas,
   }
   res.render('menu', viewData)
+})
+
+router.get('/order-list', async (req, res) => {
+  const orderList = await lib.getFile('server/data/neworder.json')
+  // const orders = orderList.orders
+  res.render('order-list', orderList)
+})
+
+router.get('/ordersent', (req, res) => {
+  res.render('order-sent')
 })
 
 router.get('/:id', async (req, res) => {
@@ -37,26 +47,17 @@ const newOrder = { orders: [] }
 router.post('/:id', async (req, res) => {
   const bubbletea = await findBubbletea(req)
 
+  bubbletea.ordernumber = Math.floor(Math.random() * 101)
   bubbletea.size = req.body.size
   bubbletea.temp = req.body.temp
   bubbletea.ice = req.body.ice
   bubbletea.sugar = req.body.sugar
   bubbletea.topping = req.body.topping
-  console.log(bubbletea)
 
   newOrder.orders.push(bubbletea)
-  console.log(newOrder)
 
   await lib.updateFile(newOrder)
   res.redirect('/bubbletea/order-list')
-})
-
-router.get('/order-list', async (req, res) => {
-  res.render('order-list')
-})
-
-router.get('/ordersent', (req, res) => {
-  res.render('order-sent')
 })
 
 // router.post('/:id/edit', async (req, res) => {
