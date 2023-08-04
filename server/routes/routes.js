@@ -32,47 +32,65 @@ router.get('/:id', async (req, res) => {
   res.render('details', bubbletea)
 })
 
+const newOrder = { orders: [] }
+
 router.post('/:id', async (req, res) => {
-  const puppy = await findPuppy(req)
-  res.render('edit', puppy)
+  const bubbletea = await findBubbletea(req)
+
+  bubbletea.size = req.body.size
+  bubbletea.temp = req.body.temp
+  bubbletea.ice = req.body.ice
+  bubbletea.sugar = req.body.sugar
+  bubbletea.topping = req.body.topping
+  console.log(bubbletea)
+
+  newOrder.orders.push(bubbletea)
+  console.log(newOrder)
+
+  await lib.updateFile(newOrder)
+  res.redirect('/bubbletea/order-list')
+})
+
+router.get('/order-list', async (req, res) => {
+  res.render('order-list')
 })
 
 router.get('/ordersent', (req, res) => {
   res.render('order-sent')
 })
 
-router.post('/:id/edit', async (req, res) => {
-  const { id } = req.params
-  const puppiesFile = await lib.getFile()
-  const puppy = await findPuppy(req)
+// router.post('/:id/edit', async (req, res) => {
+//   const { id } = req.params
+//   const puppiesFile = await lib.getFile()
+//   const puppy = await findPuppy(req)
 
-  puppy.name = req.body.name
-  puppy.breed = req.body.breed
-  puppy.owner = req.body.owner
+//   puppy.name = req.body.name
+//   puppy.breed = req.body.breed
+//   puppy.owner = req.body.owner
 
-  puppiesFile.puppies.splice(puppy.id - 1, 1, puppy)
-  await lib.updateFile(puppiesFile)
+//   puppiesFile.puppies.splice(puppy.id - 1, 1, puppy)
+//   await lib.updateFile(puppiesFile)
 
-  res.redirect(`/puppies/${id}`)
-})
+//   res.redirect(`/puppies/${id}`)
+// })
 
-router.post('/add-puppy', async (req, res) => {
-  const puppiesFile = await lib.getFile()
-  const newPuppy = {
-    id: puppiesFile.puppies.length + 1,
-    name: req.body.name,
-    owner: req.body.owner,
-    image: req.body.image,
-    breed: req.body.breed,
-  }
+// router.post('/add-puppy', async (req, res) => {
+//   const puppiesFile = await lib.getFile()
+//   const newPuppy = {
+//     id: puppiesFile.puppies.length + 1,
+//     name: req.body.name,
+//     owner: req.body.owner,
+//     image: req.body.image,
+//     breed: req.body.breed,
+//   }
 
-  puppiesFile.puppies.push(newPuppy)
-  await lib.updateFile(puppiesFile)
+//   puppiesFile.puppies.push(newPuppy)
+//   await lib.updateFile(puppiesFile)
 
-  const viewData = {
-    visible: 'visible',
-  }
-  res.render('add-puppy', viewData)
-})
+//   const viewData = {
+//     visible: 'visible',
+//   }
+//   res.render('add-puppy', viewData)
+// })
 
 export default router

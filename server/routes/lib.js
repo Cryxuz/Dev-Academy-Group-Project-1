@@ -16,7 +16,7 @@ export async function getFile() {
 export async function updateFile(file) {
   try {
     const updatedFile = JSON.stringify(file, null, 2)
-    fs.writeFile(Path.resolve(filePath), updatedFile)
+    fs.writeFile(Path.resolve('server/data/neworder.json'), updatedFile)
   } catch (err) {
     console.error(err.message)
   }
