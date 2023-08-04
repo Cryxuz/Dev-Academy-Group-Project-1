@@ -1,16 +1,14 @@
 {
   "orders": [
     {
-      "id": 3,
-      "name": "Oatmeal Milk tea",
-      "type": "oat milk",
-      "temp": "cold",
-      "image": "/images/bubbletea3.png",
+      "id": 2,
+      "name": "Taro Milk tea",
+      "type": "milk",
+      "image": "/images/bubbletea2.png",
       "sugar": "no sugar",
       "ice": "No Ice",
-      "size": "large",
       "topping": "bubbles",
-      "ordernumber": 38
+      "ordernumber": 100
     }
   ]
 }

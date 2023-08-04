@@ -1,11 +1,11 @@
 <div class="order-list">
   <p>Your order:</p>
-  <ol>
+  <ol style="list-style-type: none">
     {{#each orders}}
      <li>{{>order}}</li>
     {{/each}}
   </ol>
 </div>
-<a class="back" href="/bubbletea/menu">back to menu</a>
+<a class="link" style="margin-top: 20px"href="/bubbletea/menu">back to menu</a>
 
 {{!-- Should write new .JSON with just the order and loop through display each --}}

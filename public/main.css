@@ -96,6 +96,7 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: 'Roboto', sans-serif;
+  margin-top: 0px;
 }
 
 input {
@@ -113,4 +114,24 @@ label {
 .order-list {
   width: fit-content;
   background-color: #ffa303;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 40px;
+}
+
+p {
+  text-align: center;
+}
+select {
+  margin-bottom: 10px;
+}
+
+#size,
+#temp {
+  width: 20px;
+  text-align: center;
+}
+
+.radio {
+  margin-block: 20px;
 }
